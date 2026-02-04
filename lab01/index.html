@@ -31,13 +31,18 @@
             rotation="0 0 0">
         </a-box>
         <!--Light-->
-         <a-box
-                position="-1.328 3.944 -1.523"
+        <a-entity position="-1.328 3.944 -1.523">
+        <a-box
                 depth=".25"
                 height=".09"
                 width="1.390"
-                color="#FF0023">
+                color="#f4f9fa">
             </a-box>
+            <a-light type="point" intensity="12"  color="#FFF">
+            </a-light>
+         <a-light type="directional" intensity="12"  color="#FFF">
+        </a-light>
+        </a-entity>
 
       <!-- Wall N-->
         <a-box 
@@ -281,7 +286,7 @@
             </a-box>
             <!--Dresser three drawers 2-->
                <a-box
-                position="-1.354 0.385 -2.650"
+                position="-1.354 0.391 -2.650"
                 depth=".2"
                 height=".2"
                 width=".8"
@@ -354,7 +359,7 @@
             </a-box>
             <!--three drawers 2-->
             <a-box
-            position="-0.584  0.372 -2.652"
+            position="-0.584  0.388 -2.652"
             depth=".2"
             height=".2"
             width=".41"
