@@ -7,7 +7,7 @@
 </head>
 
 <body>
-
+    </a-entity> <!--Room Placement-->
     <a-scene background="color: #FAFAFA">
         <!-- Room Floor Remeber to Add jpg of tile-->
         <a-plane
@@ -44,33 +44,43 @@
         width="3.22"
         height="4"
         depth="0.3"
-        color="#FFF"
+        color="#f0f0f0"
         rotation="0 0 0"
         position="-1.332 1.989 -0.118">
         </a-box> 
+
+         <!--Large Picture-->
+              <a-box
+                position="-.363 2.204 -1.208"
+                depth=".01"
+                height=".310"
+                width=".8"
+                color="#94fdff">
+            </a-box>
+
             <!--Bed Pole #1-->
              <a-box
-                position="-1.575 0.765 -0.979"
+                position="-1.575 0.901 -0.979"
                 depth=".985"
-                height="1.50"
+                height="1.805"
                 width=".1"
                 color="#E59C5A">
             </a-box>
              <!--Bed Pole #2-->
              <a-box
-                position=".184 0.765 -0.979"
+                position=".184 0.901 -0.979"
                 depth=".985"
-                height="1.50"
-                width=".100"
+                height="1.805"
+                width=".1"
                 color="#E59C5A">
             </a-box>
             <!--Bed box-->
              <a-box
-                position="-.624 1.200 -0.979
+                position="-.706 1.367 -0.979"
                 depth=".985"
                 height="0.22"
-                width="1.81"
-                color="000">
+                width="1.680"
+                color="#000">
             </a-box>
 
          
@@ -81,7 +91,7 @@
                 depth=".80"
                 height=".515"
                 width=".20"
-                color="#D3D3D3">
+                color="#9c9c9c">
             </a-box>
 
                  <!--Bean Bag little area-->
@@ -90,7 +100,7 @@
                 depth=".80"
                 height=".26"
                 width="1.15"
-                color="#D3D3D3">
+                color="#9c9c9c">
             </a-box>
             <!--Large White Box-->
              <a-box
@@ -193,7 +203,7 @@
         width="3.605" 
         height="4" 
         depth="0.3" 
-        color="#FFF"
+        color="#f0f0f0"
         rotation="0 90 0"
         position=".386 2.016 -1.704">
         </a-box>
@@ -222,11 +232,37 @@
          width="2.47"
         height="4"
         depth="0.3"
-        color="#FFF"
+        color="#f0f0f0"
         rotation="0 0 0"
         position="-0.869 2.021 -3.363">
         </a-box> 
 
+        <a-entity><!--Wall S Picture Frames-->
+             <!--Large Picture-->
+              <a-box
+                position="-1.203 1.651 -3.195"
+                depth=".01"
+                height=".310"
+                width=".8"
+                color="#b8c9ff">
+            </a-box>
+             <!--Small Picture #1-->
+              <a-box
+                position="-1.081 1.288 -3.195"
+                depth=".01"
+                height=".210"
+                width=".2"
+                color="#ffe0fb">
+            </a-box>
+             <!--Small Picture #2-->
+              <a-box
+                position="-1.401 1.288 -3.195"
+                depth=".01"
+                height=".210"
+                width=".2"
+                color="#a3a3a3">
+            </a-box>
+        </a-entity>
          <!--Dresser All items get wood jpg-->
         <a-box
             position="-1.354 0.385 -2.865"
@@ -338,7 +374,7 @@
         width="2.75"
         height="4"
         depth="0.3"
-        color="#FFF"
+        color="#f0f0f0"
         rotation="0 -90 0"
         position="-3 2 -1.568">
         </a-box> 
@@ -357,7 +393,7 @@
         width="1.08"
         height="4"
         depth="0.3" 
-        color="#FFF"
+        color="#f0f0f0"
         rotation="0 45 0"
         position="-2.568 1.994 -2.966">
         </a-box> 
@@ -377,5 +413,6 @@
     
 
     <script type="module" src="/src/main.js"></script>
+    </a-entity>
 </body>
 </html>
