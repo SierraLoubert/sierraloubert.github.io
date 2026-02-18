@@ -7,473 +7,497 @@
 </head>
 
 <body>
-    <a-scene>
-        <a-assets>
-
-                <img id="wall_diff" src="/beige_wall_001/beige_wall_001_diff_1k.png" alt="">
-                <img id="wall_ao" src="/beige_wall_001/beige_wall_001_ao_1k.png" alt="">
-                <img id="wall_nor" src="/beige_wall_001/beige_wall_001_nor_gl_1k.png" alt="">
-                <img id="wall_rough" src="/beige_wall_001/beige_wall_001_rough_1k.png" alt="">
-
-                <img id="cotton_diff" src="/cotton/cotton_jersey_diff_1k.png" alt="">
-                <img id="cotton_ao" src="/beige_wall_001/cotton_jersey_ao_1k.png" alt="">
-                <img id="cotton_nor" src="/beige_wall_001/cotton_jersey_nor_gl_1k.png" alt="">
-                <img id="cotton_rough" src="/beige_wall_001/cotton_jersey_rough_1k.png" alt="">
-
-                <img id="paintedbrick_diff" src="/painted_brick/painted_brick_diff_1k.png" alt="">
-                <img id="paintedbrick_ao" src="/painted_brick/painted_brick_ao_1k.png" alt="">
-                <img id="paintedbrick_nor" src="/painted_brick/painted_brick_nor_gl_1k.png" alt="">
-                <img id="paintedbrick_rough" src="/painted_brick/painted_brick_rough_1k.png" alt="">
-
-                <img id="curly_diff" src="/curly/curly_teddy_natural_diff_1k.png" alt="">
-                <img id="curly_ao" src="/curly/curly_teddy_natural_ao_1k.png" alt="">
-                <img id="curly_nor" src="/curly/curly_teddy_natural_nor_gl_1k.png" alt="">
-                <img id="curly_rough" src="/curly/curly_teddy_natural_rough_1k.png" alt="">
-
-                <img id="oakwood_diff" src="/oakwood/oak_veneer_01_diff_1k.png" alt="">
-                <img id="oakwood_ao" src="/oakwood/oak_veneer_01_ao_1k.png" alt="">
-                <img id="oakwood_nor" src="/oakwood/oak_veneer_01_nor_gl_1k.png" alt="">
-                <img id="oakwood_rough" src="/oakwood/oak_veneer_01_rough_1k.png" alt="">
-
-                <img id="floortiles_diff" src="/floortiles/interior_tiles_natural_diff_1k.png" alt="">
-                <img id="floortiles_ao" src="/floortiles/interior_tiles_natural_ao_1k.png" alt="">
-                <img id="floortiles_nor" src="/floortiles/interior_tiles_natural_nor_gl_1k.png" alt="">
-                <img id="floortiles_rough" src="/floortiles/interior_tiles_natural_rough_1k.png" alt="">
-
-
-
-
-            </a-assets>
-
-
-
         <a-scene background="color: #FAFAFA">
-            <a-entity material: roughness: 1; metalness: 0; src: #floortiles_diff; roughnessMap: #floortiles_rough;  normalMap: #floortiles_nor; ambientOcclusionMap: #floortiles_ao"> <!--Room Placement-->
-            <!-- Room Floor Remeber to Add jpg of tile-->
-            <a-plane
-                rotation="-90 0 0"
-                position="0 0 -1.05"
-                width="10"
-                height="10"
-                color="#333"
-                rotation="0 0 0">
-            </a-plane>
+            <a-assets>
+
+                    <img id="wall_diff" src="/beige_wall_001/beige_wall_001_diff_1k.png" alt="">
+                    <img id="wall_ao" src="/beige_wall_001/beige_wall_001_ao_1k.png" alt="">
+                    <img id="wall_nor" src="/beige_wall_001/beige_wall_001_nor_gl_1k.png" alt="">
+                    <img id="wall_rough" src="/beige_wall_001/beige_wall_001_rough_1k.png" alt="">
+
+                    <img id="cotton_diff" src="/cotton/cotton_jersey_diff_1k.png" alt="">
+                    <img id="cotton_ao" src="/beige_wall_001/cotton_jersey_ao_1k.png" alt="">
+                    <img id="cotton_nor" src="/beige_wall_001/cotton_jersey_nor_gl_1k.png" alt="">
+                    <img id="cotton_rough" src="/beige_wall_001/cotton_jersey_rough_1k.png" alt="">
+
+                    <img id="paintedbrick_diff" src="/painted_brick/painted_brick_diff_1k.png" alt="">
+                    <img id="paintedbrick_ao" src="/painted_brick/painted_brick_ao_1k.png" alt="">
+                    <img id="paintedbrick_nor" src="/painted_brick/painted_brick_nor_gl_1k.png" alt="">
+                    <img id="paintedbrick_rough" src="/painted_brick/painted_brick_rough_1k.png" alt="">
+
+                    <img id="curly_diff" src="/curly/curly_teddy_natural_diff_1k.png" alt="">
+                    <img id="curly_ao" src="/curly/curly_teddy_natural_ao_1k.png" alt="">
+                    <img id="curly_nor" src="/curly/curly_teddy_natural_nor_gl_1k.png" alt="">
+                    <img id="curly_rough" src="/curly/curly_teddy_natural_rough_1k.png" alt="">
+
+                    <img id="oakwood_diff" src="/oakwood/oak_veneer_01_diff_1k.png" alt="">
+                    <img id="oakwood_ao" src="/oakwood/oak_veneer_01_ao_1k.png" alt="">
+                    <img id="oakwood_nor" src="/oakwood/oak_veneer_01_nor_gl_1k.png" alt="">
+                    <img id="oakwood_rough" src="/oakwood/oak_veneer_01_rough_1k.png" alt="">
+
+                    <img id="floortiles_diff" src="/floortiles/interior_tiles_natural_diff_1k.png" alt="">
+                    <img id="floortiles_ao" src="/floortiles/interior_tiles_natural_ao_1k.png" alt="">
+                    <img id="floortiles_nor" src="/floortiles/interior_tiles_natural_nor_gl_1k.png" alt="">
+                    <img id="floortiles_rough" src="/floortiles/interior_tiles_natural_rough_1k.png" alt="">
 
 
-            <!-- Ceiling-->
-            <a-box material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
-                rotation="-90 0 0"
-                position="0 4.002 -1.05"
-                width="10"
-                height="10"
-                depth=".01"
-                color="#FFFEF2"
-                rotation="0 0 0">
-            </a-box>
-            <!--Light-->
-            <a-entity position="-1.328 3.944 -0.233">
-            <a-box
-                    depth=".25"
-                    height=".09"
-                    width="1.390"
-                    color="#f4f9fa">
-                </a-box>
-                <a-light type="point" intensity="12"  color="#FFF">
-                </a-light>
-            <a-light type="directional" intensity="12"  color="#FFF">
-            </a-light>
-            </a-entity>
 
-        <a-entity material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"> <!-- Wall N-->
-            <a-box 
-            width="3.22"
-            height="4"
-            depth="0.3"
-            color="#f0f0f0"
-            rotation="0 0 0"
-            position="-1.332 1.989 1.172">
-            </a-box> 
 
-            <!--Large Picture-->
-                <a-box material: roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"
-                    position="-.739 2.204 1.021"
+                </a-assets>
+
+
+
+            
+                <a-entity material= "roughness: 1; metalness: 0; src: #floortiles_diff; roughnessMap: #floortiles_rough;  normalMap: #floortiles_nor; ambientOcclusionMap: #floortiles_ao"> <!--Room Placement-->
+                <!-- Room Floor Remeber to Add jpg of tile-->
+                <a-plane
+                    rotation="-90 0 0"
+                    position="0 0 -1.05"
+                    width="10"
+                    height="10"
+                    color="#333"
+                    rotation="0 0 0">
+                </a-plane>
+
+
+                <!-- Ceiling-->
+                <a-box material="roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
+                    rotation="-90 0 0"
+                    position="0 4.002 -1.05"
+                    width="10"
+                    height="10"
                     depth=".01"
-                    height=".310"
-                    width=".8"
-                    color="#94fdff">
+                    color="#FFFEF2"
+                    rotation="0 0 0">
                 </a-box>
-            
-            <a-entity> <!--Bed-->
-                <!--Bed Pole #1-->
-                <a-box  material: roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
-                    position="-1.575 0.901 0.311"
-                    depth=".985"
-                    height="1.805"
-                    width=".1"
-                    color="#E59C5A">
-                </a-box>
-                <!--Bed Pole #2-->
-                <a-box  material: roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
-                    position=".184 0.901 0.311"
-                    depth=".985"
-                    height="1.805"
-                    width=".1"
-                    color="#E59C5A">
-                </a-box>
-                <!--Bed box-->
-                <a-box material: roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"
-                    position="-.706 1.367 0.311"
-                    depth=".985"
-                    height="0.22"
-                    width="1.680"
-                    color="#000">
-                </a-box>
-                </a-entity>
-            
-
-                <a-entity> <!--Bean Bag-->
-                <!--Bean Bag big area-->
-                <a-box material: roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"
-                    position="-.968 .26 0.614"
-                    depth=".80"
-                    height=".515"
-                    width=".20"
-                    color="#9c9c9c">
-                </a-box>
-
-                    <!--Bean Bag little area-->
-                <a-box  material: roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"
-                    position="-.442 .132 0.614"
-                    depth=".80"
-                    height=".26"
-                    width="1.15"
-                    color="#9c9c9c">
-                </a-box>
-                </a-entity>
-                <a-entity> <!--5 Shelf Box-->
-                <!--Large White Box-->
+                <!--Light-->
+                <a-entity position="-1.328 3.944 -0.233">
                 <a-box
-                    position="-1.321 0.503 0.834"
-                    depth=".34"
-                    height="1.01"
-                    width=".33"
-                    color="#ffffff">
-                </a-box> 
-                    <!--Clear Boxes #1-->
-                    <a-box
-                        position="-1.325 .887 0.821"
-                        depth=".33"
-                        height=".175"
-                        width=".33"
-                        color="#f4f9fa">
-                    </a-box> 
-                    <!--Clear Boxes #2-->
-                    <a-box
-                        position="-1.325 .695 0.821"
-                        depth=".33"
-                        height=".175"
-                        width=".33"
-                        color="#f4f9fa">
-                    </a-box> 
-                    <!--Clear Boxes #3-->
-                    <a-box
-                        position="-1.325 .504 0.821"
-                        depth=".33"
-                        height=".175"
-                        width=".33"
-                        color="#f4f9fa">
-                    </a-box> 
-                    <!--Clear Boxes #4-->
-                    <a-box
-                        position="-1.325 .315 0.821"
-                        depth=".33"
-                        height=".175"
-                        width=".33"
-                        color="#f4f9fa">
-                    </a-box> 
-                    <!--Clear Boxes #5-->
-                    <a-box
-                        position="-1.325 0.109 0.821"
-                        depth=".33"
-                        height=".175"
-                        width=".33"
+                        depth=".25"
+                        height=".09"
+                        width="1.390"
                         color="#f4f9fa">
                     </a-box>
-                    </a-entity> 
-                <a-entity  material: roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"> <!-- Closet-->
-                    <a-box
-                        position="-2.162 .950 0.691"
-                        depth=".595"
-                        height="1.805"
-                        width=".92"
-                        color="#E59C5A">
-                    </a-box>
-
-                    <!-- Closet Door right-->
-                    <a-box
-                        rotation="0 0 90"
-                        position="-2.371 1.176 0.429"
-                        width="1.33"
-                        height=".44"
-                        depth=".10"
-                        color="#E59C5A">
-                    </a-box>
-
-                    <!-- Closet Door left-->
-                    <a-box
-                        rotation="0 0 90"
-                        position="-1.928 1.176 0.429"
-                        width="1.33"
-                        height=".44"
-                        depth=".10"
-                        color="#E59C5A">
-                    </a-box>
-
-                    <!--Closet Drawer 1-->
-                    <a-box
-                        rotation="0 0 0"
-                        position="-2.160 .370 0.68"
-                        depth=".595"
-                        height=".18"
-                        width=".865"
-                        color="#E59C5A">
-                    </a-box>
-                    <!--Closet Drawer 2-->
-                    <a-box
-                        rotation="0 0 0"
-                        position="-2.160 .145 0.68"
-                        depth=".595"
-                        height=".18"
-                        width=".865"
-                        color="#E59C5A">
-                    </a-box>
-                </a-entity>
+                    <a-light type="point" intensity="12"  color="#FFF">
+                    </a-light>
+                <a-light type="directional" intensity="12"  color="#FFF">
+                </a-light>
                 </a-entity>
 
-            <a-entity material: roughness: 1; metalness: 0; src: #paintedbrick_diff; roughnessMap: #paintedbrick_rough;  normalMap: #paintedbrick_nor; ambientOcclusionMap: #paintedbrick_ao"> <!-- Wall E-->
-            <a-box material: roughness: 1; metalness: 0; src: #paintedbrick_diff; roughnessMap: #paintedbrick_rough;  normalMap: #paintedbrick_nor; ambientOcclusionMap: #paintedbrick_ao"
-            width="3.605" 
-            height="4" 
-            depth="0.3" 
-            color="#f0f0f0"
-            rotation="0 90 0"
-            position=".386 2.016 -0.414">
-            </a-box>
-
-            <!--Refrigerator-->
-                    <a-box
-                    position="-0.028 .236 -0.685"
-                    depth=".44"
-                    height=".485"
-                    width=".44"
-                    color="#000000">
-                    </a-box>
-
-                <!-- Window-->
-                    <a-box
-                        rotation="0 90 0"
-                        position=".286 2.223 -1.42"
-                        width=".955"
-                        height="2.21"
-                        depth=".115"
-                        color="#00F">
-                    </a-box>
-            </a-entity>
-
-            <a-entity material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"> <!-- Wall S-->
+            <a-entity> <!-- Wall N-->
                 <a-box 
-                width="2.47"
+                material= "roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
+                width="3.22"
                 height="4"
                 depth="0.3"
                 color="#f0f0f0"
                 rotation="0 0 0"
-                position="-0.869 2.021 -2.073">
+                position="-1.332 1.989 1.172">
                 </a-box> 
-            </a-entity>
 
-            <a-entity material: roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"><!--Wall S Picture Frames-->
                 <!--Large Picture-->
-                <a-box
-                    position="-1.203 1.651 -1.905"
-                    depth=".01"
-                    height=".310"
-                    width=".8"
-                    color="#b8c9ff">
-                </a-box>
-                <!--Small Picture #1-->
-                <a-box
-                    position="-1.081 1.288 -1.905"
-                    depth=".01"
-                    height=".210"
-                    width=".2"
-                    color="#ffe0fb">
-                </a-box>
-                <!--Small Picture #2-->
-                <a-box
-                    position="-1.401 1.288 -1.905"
-                    depth=".01"
-                    height=".210"
-                    width=".2"
-                    color="#a3a3a3">
-                </a-box>
-            </a-entity>
-            <!--Dresser All items get wood jpg-->
-            <a-entity  material: roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao">
-                <a-box
-                position="-1.354 0.385 -1.575"
-                depth=".6"
-                height=".755"
-                width=".91"
-                color="#E59C5A">
-                </a-box>
-            <!--Dresser three drawers-->
-                <a-box
-                    position="-1.354 0.615 -1.36"
-                    depth=".2"
-                    height=".2"
-                    width=".8"
-                    color="#E59C5A">
-                </a-box>
-                <!--Dresser three drawers 2-->
-                <a-box
-                    position="-1.354 0.391 -1.36"
-                    depth=".2"
-                    height=".2"
-                    width=".8"
-                    color="#E59C5A">
-                </a-box>
-                <!--Dresser three drawers 3-->
-                <a-box
-                    position="-1.354 0.160 -1.36"
-                    depth=".2"
-                    height=".2"
-                    width=".8"
-                    color="#E59C5A">
-                </a-box>
-            </a-entity>
-
-                <!--trash can-->
-                <a-cylinder
-                position="-1.918 0.108 -1.805"
-                radius="0.1"
-                height="0.2"
-                color="#C0C0C0">
-        `     </a-cylinder>
-
-            <a-entity><!-- Desk-->
-            <a-box material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
-                position="-0.324 0.763 -1.715"
-                depth=".3"
-                height="1.50"
-                width=".98"
-                color="#E59C5A">
-            </a-box>
-            <!--Large Desk with Drawers-->
-            <a-box material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
-                position="-0.579  0.385 -1.575"
-                depth=".6"
-                height=".745"
-                width=".5"
-                color="#E59C5A">
-            </a-box>
-                <!--open hole-->  
-            <a-box
-                position="-0.104  0.329 -1.568"
-                depth=".6"
-                height=".645"
-                width=".44"
-                color="#000">
-            </a-box>
-            <!--Small Area-->
-            <a-box material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
-                position="0.130  0.381 -1.574"
-                depth=".6"
-                height=".745"
-                width=".03"
-                color="#E59C5A">
-            </a-box>
-            </a-entity>
-                </a-entity material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"><!--Pull-out drawer-->
-                    <a-box
-                        position="-0.104 .709 -1.574"
-                        depth=".6"
-                        height=".1"
-                        width=".56"
+                    <a-box material= "roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"
+                        position="-.739 2.204 1.021"
+                        depth=".01"
+                        height=".310"
+                        width=".8"
+                        color="#94fdff">
+                    </a-box>
+                
+                <a-entity> <!--Bed-->
+                    <!--Bed Pole #1-->
+                    <a-box  material= "roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="-1.575 0.901 0.311"
+                        depth=".985"
+                        height="1.805"
+                        width=".1"
                         color="#E59C5A">
                     </a-box>
-                        <!--three drawers 1-->
+                    <!--Bed Pole #2-->
+                    <a-box  material= "roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position=".184 0.901 0.311"
+                        depth=".985"
+                        height="1.805"
+                        width=".1"
+                        color="#E59C5A">
+                    </a-box>
+                    <!--Bed box-->
+                    <a-box material="roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"
+                        position="-.706 1.367 0.311"
+                        depth=".985"
+                        height="0.22"
+                        width="1.680"
+                        color="#000">
+                    </a-box>
+                    </a-entity>
+                
+
+                    <a-entity> <!--Bean Bag-->
+                    <!--Bean Bag big area-->
+                    <a-box material="roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"
+                        position="-.968 .26 0.614"
+                        depth=".80"
+                        height=".515"
+                        width=".20"
+                        color="#9c9c9c">
+                    </a-box>
+
+                        <!--Bean Bag little area-->
+                    <a-box  material="roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao"
+                        position="-.442 .132 0.614"
+                        depth=".80"
+                        height=".26"
+                        width="1.15"
+                        color="#9c9c9c">
+                    </a-box>
+                    </a-entity>
+                    <a-entity> <!--5 Shelf Box-->
+                    <!--Large White Box-->
                     <a-box
-                        position="-0.584  0.604 -1.362"
+                        position="-1.321 0.503 0.834"
+                        depth=".34"
+                        height="1.01"
+                        width=".33"
+                        color="#ffffff">
+                    </a-box> 
+                        <!--Clear Boxes #1-->
+                        <a-box
+                            position="-1.325 .887 0.821"
+                            depth=".33"
+                            height=".175"
+                            width=".33"
+                            color="#f4f9fa">
+                        </a-box> 
+                        <!--Clear Boxes #2-->
+                        <a-box
+                            position="-1.325 .695 0.821"
+                            depth=".33"
+                            height=".175"
+                            width=".33"
+                            color="#f4f9fa">
+                        </a-box> 
+                        <!--Clear Boxes #3-->
+                        <a-box
+                            position="-1.325 .504 0.821"
+                            depth=".33"
+                            height=".175"
+                            width=".33"
+                            color="#f4f9fa">
+                        </a-box> 
+                        <!--Clear Boxes #4-->
+                        <a-box
+                            position="-1.325 .315 0.821"
+                            depth=".33"
+                            height=".175"
+                            width=".33"
+                            color="#f4f9fa">
+                        </a-box> 
+                        <!--Clear Boxes #5-->
+                        <a-box
+                            position="-1.325 0.109 0.821"
+                            depth=".33"
+                            height=".175"
+                            width=".33"
+                            color="#f4f9fa">
+                        </a-box>
+                        </a-entity> 
+                    <a-entity> <!-- Closet-->
+                        <a-box 
+                            material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                            position="-2.162 .950 0.691"
+                            depth=".595"
+                            height="1.805"
+                            width=".92"
+                            color="#E59C5A">
+                        </a-box>
+
+                        <!-- Closet Door right-->
+                        <a-box
+                            material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                            rotation="0 0 90"
+                            position="-2.371 1.176 0.429"
+                            width="1.33"
+                            height=".44"
+                            depth=".10"
+                            color="#E59C5A">
+                        </a-box>
+
+                        <!-- Closet Door left-->
+                        <a-box
+                            material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                            rotation="0 0 90"
+                            position="-1.928 1.176 0.429"
+                            width="1.33"
+                            height=".44"
+                            depth=".10"
+                            color="#E59C5A">
+                        </a-box>
+
+                        <!--Closet Drawer 1-->
+                        <a-box
+                            material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                            rotation="0 0 0"
+                            position="-2.160 .370 0.68"
+                            depth=".595"
+                            height=".18"
+                            width=".865"
+                            color="#E59C5A">
+                        </a-box>
+                        <!--Closet Drawer 2-->
+                        <a-box
+                            material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                            rotation="0 0 0"
+                            position="-2.160 .145 0.68"
+                            depth=".595"
+                            height=".18"
+                            width=".865"
+                            color="#E59C5A">
+                        </a-box>
+                    </a-entity>
+                    </a-entity>
+
+                <a-entity> <!-- Wall E-->
+                <a-box material="roughness: 1; metalness: 0; src: #paintedbrick_diff; roughnessMap: #paintedbrick_rough;  normalMap: #paintedbrick_nor; ambientOcclusionMap: #paintedbrick_ao"
+                width="3.605" 
+                height="4" 
+                depth="0.3" 
+                color="#f0f0f0"
+                rotation="0 90 0"
+                position=".386 2.016 -0.414">
+                </a-box>
+
+                <!--Refrigerator-->
+                        <a-box
+                        position="-0.028 .236 -0.685"
+                        depth=".44"
+                        height=".485"
+                        width=".44"
+                        color="#000000">
+                        </a-box>
+
+                    <!-- Window-->
+                        <a-box
+                            rotation="0 90 0"
+                            position=".286 2.223 -1.42"
+                            width=".955"
+                            height="2.21"
+                            depth=".115"
+                            color="#00F">
+                        </a-box>
+                </a-entity>
+
+                <a-entity> <!-- Wall S-->
+                    <a-box 
+                    material="roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
+                    width="2.47"
+                    height="4"
+                    depth="0.3"
+                    color="#f0f0f0"
+                    rotation="0 0 0"
+                    position="-0.869 2.021 -2.073">
+                    </a-box> 
+                </a-entity>
+
+                <a-entity><!--Wall S Picture Frames-->
+                    <!--Large Picture-->
+                    <a-box
+                        position="-1.203 1.651 -1.905"
+                        depth=".01"
+                        height=".310"
+                        width=".8"
+                        color="#b8c9ff"
+                        material="roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao">
+                    </a-box>
+                    <!--Small Picture #1-->
+                    <a-box
+                        position="-1.081 1.288 -1.905"
+                        depth=".01"
+                        height=".210"
+                        width=".2"
+                        color="#ffe0fb"
+                        material="roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao">
+                    </a-box>
+                    <!--Small Picture #2-->
+                    <a-box
+                        position="-1.401 1.288 -1.905"
+                        depth=".01"
+                        height=".210"
+                        width=".2"
+                        color="#a3a3a3"
+                        material="roughness: 1; metalness: 0; src: #curly_diff; roughnessMap: #curly_rough;  normalMap: #curly_nor; ambientOcclusionMap: #curly_ao">
+                    </a-box>
+                </a-entity>
+                <!--Dresser All items get wood jpg-->
+                <a-entity>
+                    <a-box
+                    material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                    position="-1.354 0.385 -1.575"
+                    depth=".6"
+                    height=".755"
+                    width=".91"
+                    color="#E59C5A">
+                    </a-box>
+                <!--Dresser three drawers-->
+                    <a-box
+                        material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="-1.354 0.615 -1.36"
+                        depth=".2"
+                        height=".2"
+                        width=".8"
+                        color="#E59C5A">
+                    </a-box>
+                    <!--Dresser three drawers 2-->
+                    <a-box
+                        material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="-1.354 0.391 -1.36"
+                        depth=".2"
+                        height=".2"
+                        width=".8"
+                        color="#E59C5A">
+                    </a-box>
+                    <!--Dresser three drawers 3-->
+                    <a-box
+                        material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="-1.354 0.160 -1.36"
+                        depth=".2"
+                        height=".2"
+                        width=".8"
+                        color="#E59C5A">
+                    </a-box>
+                </a-entity>
+
+                    <!--trash can-->
+                    <a-cylinder
+                    position="-1.918 0.108 -1.805"
+                    radius="0.1"
+                    height="0.2"
+                    color="#C0C0C0">
+            `     </a-cylinder>
+
+                <a-entity><!-- Desk-->
+                <a-box 
+                    material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                    position="-0.324 0.763 -1.715"
+                    depth=".3"
+                    height="1.50"
+                    width=".98"
+                    color="#E59C5A">
+                </a-box>
+                <!--Large Desk with Drawers-->
+                <a-box 
+                    material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                    position="-0.579  0.385 -1.575"
+                    depth=".6"
+                    height=".745"
+                    width=".5"
+                    color="#E59C5A">
+                </a-box>
+                    <!--open hole-->  
+                <a-box
+                    position="-0.104  0.329 -1.568"
+                    depth=".6"
+                    height=".645"
+                    width=".44"
+                    color="#000">
+                </a-box>
+                <!--Small Area-->
+                <a-box 
+                    material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                    position="0.130  0.381 -1.574"
+                    depth=".6"
+                    height=".745"
+                    width=".03"
+                    color="#E59C5A">
+                </a-box>
+                </a-entity>
+                    </a-entity><!--Pull-out drawer-->
+                        <a-box 
+                            material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                            position="-0.104 .709 -1.574"
+                            depth=".6"
+                            height=".1"
+                            width=".56"
+                            color="#E59C5A">
+                        </a-box>
+                            <!--three drawers 1-->
+                        <a-box
+                            material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                            position="-0.584  0.604 -1.362"
+                            depth=".2"
+                            height=".2"
+                            width=".41"
+                            color="#E59C5A">
+                        </a-box>
+                        <!--three drawers 2-->
+                        <a-box
+                        material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="-0.584  0.388 -1.362"
                         depth=".2"
                         height=".2"
                         width=".41"
                         color="#E59C5A">
-                    </a-box>
-                    <!--three drawers 2-->
-                    <a-box
-                    position="-0.584  0.388 -1.362"
-                    depth=".2"
-                    height=".2"
-                    width=".41"
-                    color="#E59C5A">
-                    </a-box>
-                    <!--three drawers 3-->
-                    <a-box
-                    position="-0.584  0.172 -1.362"
-                    depth=".2"
-                    height=".2"
-                    width=".41"
-                    color="#E59C5A">
-                    </a-box>
+                        </a-box>
+                        <!--three drawers 3-->
+                        <a-box
+                        material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="-0.584  0.172 -1.362"
+                        depth=".2"
+                        height=".2"
+                        width=".41"
+                        color="#E59C5A">
+                        </a-box>
+                    </a-entity>
                 </a-entity>
-            </a-entity>
 
-            <a-entity material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"><!-- Wall W-->
-            <a-box 
-            width="2.75"
-            height="4"
-            depth="0.3"
-            color="#f0f0f0"
-            rotation="0 -90 0"
-            position="-3 2 -0.278">
-            </a-box> 
+                <a-entity><!-- Wall W-->
+                <a-box 
+                material="roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
+                width="2.75"
+                height="4"
+                depth="0.3"
+                color="#f0f0f0"
+                rotation="0 -90 0"
+                position="-3 2 -0.278">
+                </a-box> 
 
-            <!-- Laundry Basket -->
-            <a-cylinder
-                position="-2.552 .309 -0.472"
-                radius="0.3"
-                height="0.615"
-                color="#FFF">
-            </a-cylinder>
-            </a-entity>
-        
+                <!-- Laundry Basket -->
+                <a-cylinder
+                    position="-2.552 .309 -0.472"
+                    radius="0.3"
+                    height="0.615"
+                    color="#FFF">
+                </a-cylinder>
+                </a-entity>
+            
 
-            <a-entity material: roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"> <!-- Wall SW-->
-            <a-box 
-            width="1.08"
-            height="4"
-            depth="0.3" 
-            color="#f0f0f0"
-            rotation="0 45 0"
-            position="-2.568 1.994 -2.0">
-            </a-box> 
+                <a-entity> <!-- Wall SW-->
+                <a-box 
+                material="roughness: 1; metalness: 0; src: #wall_diff; roughnessMap: #wall_rough;  normalMap: #wall_nor; ambientOcclusionMap: #wall_ao"
+                width="1.08"
+                height="4"
+                depth="0.3" 
+                color="#f0f0f0"
+                rotation="0 45 0"
+                position="-2.568 1.994 -2.0">
+                </a-box> 
 
-            <!-- Door -->
-            <a-box  material: roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
-            width=".955"
-            height="2.21"
-            depth=".04" 
-            color="#E59C5A"
-            rotation="0 45 0"
-            position="-2.438 1.137 -1.810">
-            </a-box> 
-            </a-entity>
+                <!-- Door -->
+                <a-box  
+                material= "roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                width=".955"
+                height="2.21"
+                depth=".04" 
+                color="#E59C5A"
+                rotation="0 45 0"
+                position="-2.438 1.137 -1.810">
+                </a-box> 
+                </a-entity>
 
 
 
-        
-            </a-entity>
-    </a-scene>
+            
+                </a-entity>
+        </a-scene>
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
