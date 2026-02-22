@@ -67,7 +67,7 @@
                     width="10"
                     height="10"
                     depth=".01"
-                    color="#FFFEF2"
+                    color="#ffecd4"
                     rotation="0 0 0">
                 </a-box>
                 <!--Light-->
@@ -78,9 +78,9 @@
                         width="1.390"
                         material="emissive: #ffffee; emissiveIntensity: 1;">
                     </a-box>
-                    <a-light type="point" intensity="12"  color="#FFF">
+                    <a-light type="point" intensity="8"  color="#FFF">
                     </a-light>
-                <a-light type="directional" intensity="12"  color="#FFF">
+                <a-light type="directional" intensity="8"  color="#FFF">
                 </a-light>
                 </a-entity>
 
@@ -283,7 +283,11 @@
                             height="2.21"
                             depth=".115"
                             color="#5790a2">
+                            <a-light type="point" position="0 -0.550 0" intensity="8"  color="#6fb2c8">
+                            </a-light>
                         </a-box>
+                         <!--Light-->
+                </a-entity>
                 </a-entity>
 
                 <a-entity> <!-- Wall S-->
@@ -375,42 +379,41 @@
             `     </a-cylinder>
 
                 <a-entity><!-- Desk-->
-                <a-box 
-                    material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
-                    position="-0.324 0.763 -1.199"
-                    depth=".3"
-                    height="1.50"
-                    width=".98"
-                    color="#E59C5A">
-                </a-box>
-                <!--Large Desk with Drawers-->
-                <a-box 
-                    material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
-                    position="-0.579  0.385 -1.062"
-                    depth=".6"
-                    height=".745"
-                    width=".5"
-                    color="#E59C5A">
-                </a-box>
-                    <!--open hole-->  
-                <a-box
-                    position="-0.104  0.329 -1.095"
-                    depth=".6"
-                    height=".645"
-                    width=".44"
-                    color="#000">
-                </a-box>
-                <!--Small Area-->
-                <a-box 
-                    material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
-                    position="0.130  0.381 -1.061"
-                    depth=".6"
-                    height=".745"
-                    width=".03"
-                    color="#E59C5A">
-                </a-box>
-                </a-entity>
-                    </a-entity><!--Pull-out drawer-->
+                    <a-box 
+                        material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="-0.324 0.763 -1.199"
+                        depth=".3"
+                        height="1.50"
+                        width=".98"
+                        color="#E59C5A">
+                    </a-box>
+                    <!--Large Desk with Drawers-->
+                    <a-box 
+                        material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="-0.579  0.385 -1.062"
+                        depth=".6"
+                        height=".745"
+                        width=".5"
+                        color="#E59C5A">
+                    </a-box>
+                        <!--open hole-->  
+                    <a-box
+                        position="-0.104  0.335 -1.076"
+                        depth=".54"
+                        height="0.675"
+                        width="0.460"
+                        color="#000">
+                    </a-box>
+                    <!--Small Area-->
+                    <a-box 
+                        material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
+                        position="0.130  0.381 -1.061"
+                        depth=".6"
+                        height=".745"
+                        width=".03"
+                        color="#E59C5A">
+                    </a-box>
+                    <a-entity><!--Pull-out drawer-->
                         <a-box 
                             material="roughness: 1; metalness: 0; src: #oakwood_diff; roughnessMap: #oakwood_rough;  normalMap: #oakwood_nor; ambientOcclusionMap: #oakwood_ao"
                             position="-0.104 .709 -1.061"
